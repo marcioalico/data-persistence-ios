@@ -101,9 +101,9 @@ extension TodoListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let cell = tableView.cellForRow(at: indexPath),
               var item = todosArray[indexPath.row] else { return }
-        item.done = !item.done
+        //item.done = !item.done
         cell.accessoryType = item.done ? .checkmark : .none
-        
+        todosArray[indexPath.row]?.done = !item.done
         saveItems()
         tableView.deselectRow(at: indexPath, animated: true)
     }
