@@ -5,9 +5,11 @@
 //  Created by Marcio Alico on 5/27/22.
 //
 
-import Foundation
 
+// Plist Codable / Decodable persistance usage (replaced by CoreData TodoItem data model)
+/*
 struct TodoItem: Encodable, Decodable {
     let title: String
     var done: Bool = false
 }
+ */
