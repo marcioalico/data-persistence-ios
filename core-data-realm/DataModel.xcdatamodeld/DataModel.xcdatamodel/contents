@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19206" systemVersion="21E258" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Category" representedClassName="Category" syncable="YES" codeGenerationType="class">
+        <attribute name="name" attributeType="String"/>
+        <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TodoItem" inverseName="category" inverseEntity="TodoItem"/>
+    </entity>
+    <entity name="TodoItem" representedClassName=".TodoItem" syncable="YES" codeGenerationType="class">
+        <attribute name="done" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="title" attributeType="String"/>
+        <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="items" inverseEntity="Category"/>
+    </entity>
+    <elements>
+        <element name="TodoItem" positionX="-4280.532958984375" positionY="556.1973571777344" width="128" height="88"/>
+        <element name="Category" positionX="-4527.777893066406" positionY="571.382568359375" width="128" height="73"/>
+    </elements>
+</model>
